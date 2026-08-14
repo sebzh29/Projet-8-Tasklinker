@@ -12,24 +12,37 @@
     <div id="projects-container">
         {% for projet in projets %}
             <article class="card-project">
-                <a href="#">
+                <a href="{{ path('app_projet_show', {id: projet.id}) }}">
                     <h2>{{ projet.nom }}</h2>
                 </a>
 
                 <div class="card-project-icons">
                     <a
-                        href="#"
+                        href="{{ path('app_projet_edit', {id: projet.id}) }}"
                         aria-label="Modifier {{ projet.nom }}"
                     >
                         <i class="fa-solid fa-pen"></i>
                     </a>
-
-                    <a
-                        href="#"
-                        aria-label="Archiver {{ projet.nom }}"
+                    <form
+                        method="post"
+                        action="{{ path('app_projet_archive', {id: projet.id}) }}"
+                        class="archive-project-form"
+                        onsubmit="return confirm('Archiver ce projet ?');"
                     >
-                        <i class="fa-solid fa-trash"></i>
-                    </a>
+                        <input
+                            type="hidden"
+                            name="_token"
+                            value="{{ csrf_token('archive' ~ projet.id) }}"
+                        >
+
+                        <button
+                            type="submit"
+                            class="archive-project-button"
+                            aria-label="Archiver {{ projet.nom }}"
+                        >
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </form>
                 </div>
             </article>
         {% else %}
@@ -37,7 +50,7 @@
         {% endfor %}
 
         <article class="card-project">
-            <a href="#">
+            <a href="{{ path('app_projet_new') }}">
                 <i class="fa-solid fa-circle-plus add-project-icon"></i>
                 <h2>Ajouter un projet</h2>
             </a>

@@ -53,7 +53,7 @@
                 </a>
 
                 <ul id="main-menu">
-                    <li class="{{ app.current_route == 'app_accueil' ? 'active' : '' }}">
+                    <li class="{{ app.current_route == 'app_accueil' or app.current_route starts with 'app_projet_' ? 'active' : '' }}">
                         <a href="{{ path('app_accueil') }}">
                             <i class="fa-solid fa-list-check"></i>
                             Projets

@@ -512,20 +512,84 @@ form .select2-container--default .select2-selection--multiple .select2-selection
     div#content {
         padding: 30px;
     }
-    
+
     nav {
         width: 50px;
         padding-left: 0;
         padding-right: 0;
         padding-top: 20px;
     }
-    
+
     #logo {
         display: none;
     }
-    
+
     ul#main-menu li a {
         border-radius: 0;
         padding: 13px;
     }
+}
+
+/*
+ * Icônes de modification et d’archivage des projets.
+ */
+.card-project-icons {
+    align-items: center;
+}
+
+.card-project-icons > a,
+.card-project-icons .archive-project-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15px;
+    height: 15px;
+    margin: 0;
+    padding: 0;
+    line-height: 15px;
+}
+
+.card-project-icons > a {
+    text-decoration: none;
+}
+
+.card-project-icons .archive-project-form {
+    width: 15px;
+    height: 15px;
+    margin: 0;
+}
+
+.card-project-icons .archive-project-button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.card-project-icons i {
+    display: block;
+    margin: 0;
+    line-height: 15px;
+}
+
+.card-project-icons .archive-project-button i {
+    color: #E14343;
+}
+
+.delete-task-form {
+    width: 320px;
+    margin: 0;
+}
+
+button.delete-task {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: #E14343;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
 }

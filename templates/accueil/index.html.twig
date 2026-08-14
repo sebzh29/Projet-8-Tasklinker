@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Liste des projets - TaskLinker
+{% endblock %}
+
+{% block page_title %}
+    Projets
+{% endblock %}
+
+{% block body %}
+    <div id="projects-container">
+        {% for projet in projets %}
+            <article class="card-project">
+                <a href="#">
+                    <h2>{{ projet.nom }}</h2>
+                </a>
+
+                <div class="card-project-icons">
+                    <a
+                        href="#"
+                        aria-label="Modifier {{ projet.nom }}"
+                    >
+                        <i class="fa-solid fa-pen"></i>
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="Archiver {{ projet.nom }}"
+                    >
+                        <i class="fa-solid fa-trash"></i>
+                    </a>
+                </div>
+            </article>
+        {% else %}
+            <p>Aucun projet en cours.</p>
+        {% endfor %}
+
+        <article class="card-project">
+            <a href="#">
+                <i class="fa-solid fa-circle-plus add-project-icon"></i>
+                <h2>Ajouter un projet</h2>
+            </a>
+        </article>
+    </div>
+{% endblock %}

@@ -86,12 +86,6 @@ DATABASE_URL="mysql://root:root@127.0.0.1:3306/tasklinker-symf?serverVersion=8.0
 
 Adapter l’identifiant, le mot de passe, le nom de la base et la version de MySQL à l’environnement utilisé.
 
-Si MySQL est configuré sans mot de passe :
-
-```dotenv
-DATABASE_URL="mysql://root@127.0.0.1:3306/tasklinker2?serverVersion=8.0.32&charset=utf8mb4"
-```
-
 ### 4. Créer la base de données
 
 ```bash

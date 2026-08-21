@@ -60,8 +60,8 @@
                         </a>
                     </li>
 
-                    <li>
-                        <a href="#">
+                    <li class="{{ app.current_route starts with 'app_employe_' ? 'active' : '' }}">
+                        <a href="{{ path('app_employe_index') }}">
                             <i class="fa-regular fa-user"></i>
                             Équipe
                         </a>

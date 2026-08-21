@@ -593,3 +593,20 @@ button.delete-task {
     text-align: center;
     cursor: pointer;
 }
+
+/*
+ * Suppression d'un employé depuis la liste de l'équipe.
+ */
+.delete-team-form {
+    display: inline;
+    width: auto;
+    margin: 0;
+}
+
+.delete-team-form .delete-team {
+    padding: 0;
+    border: none;
+    background: transparent;
+    font: inherit;
+    cursor: pointer;
+}
